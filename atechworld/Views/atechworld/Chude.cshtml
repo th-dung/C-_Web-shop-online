@@ -1,0 +1,14 @@
+﻿@model IEnumerable <atechworld.Models.ChuDe>
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="dropdown" style="float: right;">
+            <button class="dropbtn">Sản Phẩm Theo Chủ Đề</button>
+            <div class="dropdown-content">
+                @foreach (var item in Model)
+                {
+                    <a href="@Url.Action("sptheochude", "atechworld", new {id = item.MaCD})">
+                        <h5>@item.TenChuDe</h5>
+                    </a>
+                }
+            </div>
+        </div>
+     </div>

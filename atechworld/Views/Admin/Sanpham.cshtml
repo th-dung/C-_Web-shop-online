@@ -1,0 +1,86 @@
+﻿@using atechworld.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<atechworld.Models.DT>
+    @helper Truncate (string input, int length)
+    {
+        if (input.Length < length)
+        {
+            @input
+        }
+        else
+        {
+            @input.Substring(0,length)<text>...</text>
+        }
+    }
+
+@{
+    ViewBag.Title = "Sản Phẩm";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    .new a, .page a, .edit a
+    {
+        color: blue;
+        text-decoration: none;
+    }
+    h2
+    {
+        text-align: center;
+    }
+</style>
+<h2>Quản Lý Sản Phẩm</h2>
+
+<p class="new">
+    @Html.ActionLink("Thêm Mới", "ThemmoiSanpham")
+</p>
+<table class="table" border="1">
+    <tr style="text-align:center;">
+        <th>Tên SP</th>
+        <th>Giá Bán</th>
+        <th>Mô Tả</th>
+        <th>Hình Ảnh</th>
+        <th>Ngày Cập Nhật</th>
+        <th>SL Tồn</th>
+        <th>Tên Chủ Đề</th>
+        <th>Tên NSX</th>
+        <th></th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaBan)
+        </td>
+        <td>
+            @Truncate(item.MoTa,100)
+        </td>
+        <td>
+            <img src="@Url.Content("~/product_img/" + item.AnhBia)" style="width: 100%;"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayCapNhat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongTon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChuDe.TenChuDe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhaSanXuat.TenNSX)
+        </td>
+        <td class="edit">
+            @Html.ActionLink("Sửa", "Suasanpham", new { id=item.MaDT }) |
+            @*@Html.ActionLink("Chi Tiết", "Chitietsp", new { id=item.MaDT }) |*@
+            @Html.ActionLink("Xóa", "Xoasanpham", new { id=item.MaDT })
+        </td>
+    </tr>
+}
+
+</table>
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount;
+<div class="page">
+    @Html.PagedListPager(Model, page => Url.Action("Sanpham", new { page = page }))
+</div>

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<atechworld.Models.DT>
+@{
+    ViewBag.Title = "tbdientu";
+    Layout = "~/Views/Shared/_LayoutTB.cshtml";
+}
+
+<h3 style="text-align:center; color: black; margin: 28px 0;">SẢN PHẨM THEO CHỦ ĐỀ</h3>
+<div class="row">
+    @foreach (var sp in Model)
+    {
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="box" style="text-align: center">
+                <div class="images">
+                    <div class="dvone">
+                        <a href="@Url.Action("Details","atechworld", new { id = sp.MaDT })">
+                            <img style="width: 100%; overflow: hidden;" alt="@sp.TenDT" src="~/product_img/@sp.AnhBia" />
+                        </a>
+                    </div>
+                </div>
+                <div style="padding: 5px;">
+                    <div class="qcdv">
+                        <h3>@sp.TenDT</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

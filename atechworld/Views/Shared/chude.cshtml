@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- mbacss -->
+    <link rel="stylesheet" type="text/css" href="css/mba.css" />
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <section class="tbdientu">
+        <div class="opa">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="in">
+                            <h2>Cung cấp thiết bị điện tử</h2>
+                            <h3>Laptop, Macbook, Máy in,...</h3>
+                            <h2>Thi công lắp đặt hệ thống</h2>
+                            <h2>điện tử</h2>
+                            <h3>Camera, máy chấm công, năng lượng mặt trời,...</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row" style="margin: -35px 5px;">
+            <div class="col-lg-12 col-md-12 col-sm-12 bgx">
+                <h3>Cung cấp & thi công máy móc thiết bị điện tử</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-lg-12 col-md-12 col-sm-12 dt3">
+                <span class="tieude">Các sản phẩm mà chúng tôi có thể cung cấp cho khách hàng</span>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 dt4">
+                <P>
+                    Đối với chúng tôi bán ra sản phẩm là chưa đủ, mà còn phải đảm bảo được chất lượng sản phẩm mà chúng
+                    tôi đã cung cấp cũng như về chế độ bảo hành chuyên nghiệp
+                </P>
+            </div>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="box">
+                    <div class="images">
+                        <div class="dvone">
+                            <img src="~/images/" alt="Macbook" class="image" />
+                            @*<div class="overlay" style="padding: 90px 10px;">
+                                <div class="textt">
+                                    <a href="#" class="next round"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                               
+                                </div>
+                            </div>*@
+                        </div>
+                    </div>
+                    <div style="padding: 5px;">
+                        <div class="qcdv">
+                            <h3>Macbook</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <!--  thông tin sản phẩm -->
+            </div>
+        </div>
+    </div>
+        
+</body>
+</html>

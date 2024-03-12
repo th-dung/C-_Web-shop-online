@@ -1,0 +1,60 @@
+﻿<style>
+  .dathang {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  float: right;
+  font-weight:700;
+}
+.dathang {
+  border-radius: 8px;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+.dathang:hover {
+  background-color: #f44336;
+  color: white;
+  text-decoration: none;
+}
+
+</style>
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutTB.cshtml";
+}
+
+<h2 style="text-align:center; margin-top: 18px;">Thông Tin Chi Tiết Sản Phẩm</h2>
+<h3 style="color: black; text-align: center; margin: 48px 0 18px;">@Model.TenDT</h3>
+<div class="row" style="margin-bottom: 30px">
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div style="padding: 18px;">
+            <img style="width: 100%;" alt="@Model.TenDT" src="~/product_img/@Model.AnhBia" />
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div style="padding: 18px;">
+            <h4>Mô Tả Sản Phẩm:</h4>
+            <p style="text-align:justify">@Model.MoTa</p>
+        </div>
+        <div style="padding: 18px;">
+            <h4 style="font-weight: bold; font-size: 16px;">Giá Bán: </h4>
+            <h6 style="font-weight: bold;">@Model.GiaBan VND</h6>
+        </div>
+        <div>
+            <a href="@Url.Action("ThemGiohang", "Giohang", new { @iMadt = Model.MaDT, @strURL = Request.Url.ToString() })" class="dathang"> 
+                Thêm Vào Giỏ Hàng 
+            </a>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,350 @@
+/* loader */
+
+
+
+.mba
+{
+  background-image: url(https://atechworld.vn/images/app-services.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center 0px;
+}
+.web
+{
+  background-image: url(https://atechworld.vn/images/website-services.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center 0px;
+}
+.services
+{
+  background-image: url(https://atechworld.vn/images/services-helpdesk.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center 0px;
+}
+.tbdientu
+{
+  background-image: url(https://atechworld.vn/images/services-electronic.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center 0px;
+}
+.import
+{
+  background-image: url(https://atechworld.vn/images/services-import.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center 0px;
+}
+
+.textt
+{
+  text-align: center;
+}
+.textt a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.textt a:hover {
+  background-color: #24cdd5;
+  color: white;
+  border: 1px solid white;
+}
+.next {
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+.round {
+  border-radius: 20%;
+}
+.exl
+{
+  font-size: xx-large;
+  font-weight: 400;
+  margin-top: 5px;
+  color: #FFFFFF;
+}
+
+
+
+.opa
+{
+  text-align: center;
+  opacity: 0.5;
+  background-color: black;
+  background-image: none;
+  visibility: visible;
+  z-index: 1;
+} 
+.in
+{
+  z-index: 5;
+  padding: 70px 50px;
+}
+.in h2
+{
+  font-weight: 700;
+  font-family: unset;
+  color: #FFFFFF;
+}
+.in h3
+{
+  font-size: x-large;
+  color: #FFFFFF;
+}
+.bgx
+{
+  background-image: linear-gradient(to right, #5192e1 0%, #5192e1 31%, #23ced5 100%);
+  padding: 15px 10px;
+  overflow: hidden;
+
+}
+.bgx h3
+{
+  font-size: x-large;
+}
+.bgx ul
+{
+    padding: 0;
+    text-align:center;
+}
+.bgx ul li
+{
+    list-style: none;
+    display: inline;
+    margin-right: 18px;
+}
+
+
+.dt3
+{
+    text-align: center;
+}
+.tieude
+{
+    font-size: 3rem;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+    line-height: 1.2;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.dt4 p
+{
+    color: #808080;
+    font-weight: normal;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    text-align: center;
+}
+/* dịch vụ */
+.images {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    
+  }
+  .image
+  {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(rgba(35, 206, 213, 0.9), rgba(81, 146, 225, 0.9) 50%);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    
+  }
+  
+  .dvone:hover .overlay {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  .dvtwo:hover .overlay {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  .text {
+    text-align: center;
+    vertical-align: middle;
+  }
+  .box
+  {
+    box-shadow: 0 0 10px #d1d1d1;
+  }
+  .qcdv
+  {
+      text-align: center;
+  }
+  .qcdv h3
+  {
+    color: black;
+  }
+  .qcdv p
+  {
+      color: #808080;
+  }
+  .qcdv h4
+  {
+      font-size: unset;
+      color: #24cdd5;
+  }
+/*   footer */
+.col-md-3,.col-lg-3 a
+{
+  text-decoration: none;
+  color: #808080;
+}
+.col-md-3,.col-lg-3 p
+{
+  color: #808080;
+}
+/* footer hoverright */
+.hoverright {
+  border: none;
+  color: #FFFFFF;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.hoverright span {
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+
+.hoverright span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+  color: #24cdd5;
+  margin-top: -7px;
+}
+
+.hoverright:hover span {
+  padding-left: 10px;
+  color: #24cdd5;
+}
+
+.hoverright:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+.nohovera ul
+{
+    padding: 0%;
+}
+.nohovera ul li
+{
+  line-height: 2em;
+  list-style: none;
+  padding: 0%;
+}
+.nohovera a
+{
+  text-decoration: none;
+}
+.nohovera a:hover
+{
+  text-decoration: none;
+  background: none;
+}
+.hovera a
+{
+  text-decoration: none;
+  color: white;
+}
+.hovera a:hover
+{
+  text-decoration: none;
+  background: none;
+  color: #24cdd5;
+}
+.color p,h3,ul,li,a,span
+{
+  color: #FFFFFF;
+}
+.hovera ul
+{
+    padding: 0%;
+}
+.hovera ul li
+{
+  list-style: none;
+  display: inline-block;
+  height: auto;
+  width: 25px;
+  border: 0.5px solid lightgrey;
+  text-align: center;
+  border-radius: 15px;
+  margin: 30px 10px 0 0;
+}
+.hovera ul li a
+{
+  background: none;
+}
+.hovera ul li:hover
+{
+  background-color: #24cdd5;
+}
+.hovera ul li a:hover
+{
+  background-color: #24cdd5;
+  color: white;
+}
+
+/* backtop */
+.lentop {
+  display: none;
+  bottom: 40%;
+  right: 10px;
+  cursor: pointer;
+  position: fixed;
+  z-index: 1000;
+  margin-bottom: -235px;
+}
+.lentop a {
+  background-image: linear-gradient(to right, #23ced5aa 0%, #5192e1aa 100%);
+  border: 2px solid #fff;
+  border-radius: 45px;
+  padding: 11px 12.5px;
+  text-align: center;
+}
+.lentop i
+{
+  font-size: 28px;
+  color: #fff;
+  font-weight: 900;
+}

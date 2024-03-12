@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- indexcss -->
+    <link rel="stylesheet" type="text/css" href="~/Content/index.css" />
+    <script src="~/Scripts/index.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+    <section>
+        <nav>
+            <input type="checkbox" id="check" style="display: none;">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <!-- <div class="logo">
+                  <img src="~/images/logoatt.png" style="width: 100%" />
+                </div> -->
+            <ul>
+                <li><span style="font-size: 20px;cursor: pointer; color: white;" onclick="openNav()">&#9776;</span></li>
+            </ul>
+            <ul class="onclink">
+                <li><a class="#" href="#" style="background: none;">ATECHWORLD</a></li>
+                <li><a href="#" style="background: none;">Dịch Vụ</a></li>
+                <li><a href="#" style="background: none;">Đối Tác</a></li>
+                <li><a href="#" style="background: none;">Liên Hệ</a></li>
+            </ul>
+            <!-- menu right -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">ATECHWORLD</a>
+                <a href="#">Dịch Vụ</a>
+                <a href="#">Quy Trình</a>
+                <a href="#">Đối Tác</a>
+                <a href="#">Liên Hệ</a>
+                <!-- <div class="menuicon">
+                        <ul>
+                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                      </div> -->
+            </div>
+        </nav>
+        <!-- carousel -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/images/home.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="hhh">ATECHWORLD</h1>
+                        <h1 class="hh">Cung Cấp Giải Pháp</h1>
+                        <h1 class="hh mm">Cho doang nghiệp</h1>
+                        <h3 class="ppp">Lập trình Mobile App</h3>
+                        <h3 class="ppp">Thiết kế Website</h3>
+                        <h3 class="ppp">Dịch vụ IT Services</h3>
+                        <h3 class="ppp">Thiết bị điện tử</h3>
+                        <h3 class="ppp">Nhập hàng nước ngoài</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/atth5.1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="hhh">Mobile App</h2>
+                        <h2 class="hhh mm">Đa nền tảng</h2>
+                        <h3 class="ppp" style="color: black;">Hỗ Trợ IOS & Android</h3>
+                        <h3 class="ppp" style="color: black">Giao Diện Hiện Đại</h3>
+                        <h3 class="ppp" style="color: black">Chi Phí Tiết Kiệm</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/atth5.2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="hhh">Thiết kế Website</h2>
+                        <h2 class="hhh mm">Chuyên Nghiệp</h2>
+                        <h3 class="ppp" style="color: black">Giao diện Mượt Mà</h3>
+                        <h3 class="ppp" style="color: black">Hệ Thống Ổn Định</h3>
+                        <h3 class="ppp" style="color: black">Tư Vấn Nhiệt Tình</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/atth5.3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="hhh">Dịch vụ IT</h2>
+                        <h2 class="hhh mm">Services</h2>
+                        <h3 class="ppp">Tư Vấn Giải Pháp</h3>
+                        <h3 class="ppp">Đội Ngũ Nhiều Kinh Nghiệm</h3>
+                        <h3 class="ppp">Bảo Trì Nhanh Chóng</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/atth1.4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="hhh">Dịch vụ IT</h2>
+                        <h2 class="hhh mm">Services</h2>
+                        <h3 class="ppp">Tư Vấn Giải Pháp</h3>
+                        <h3 class="ppp">Đội Ngũ Nhiều Kinh Nghiệm</h3>
+                        <h3 class="ppp">Bảo Trì Nhanh Chóng</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/import.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div>
+                            <h2 class="hhh">Nhập khẩu hàng</h2>
+                            <h2 class="hhh mm">Nước ngoài</h2>
+                            <h3 class="ppp">Hỗ Trợ Tìm Hàng</h3>
+                            <h3 class="ppp">Giao Hàng Nhanh Chóng</h3>
+                            <h3 class="ppp">Nhiều Tuyến Nước Ngoài</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev"
+               style="display: none;">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next" style="display: none;">
+                <span class=" carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <div>
+        @RenderBody()
+    </div>
+    <div class="container">
+        <div class="row" style="margin: 0%; text-align: center; width: 100%;">
+            <div class="col-md-12 col-lg-12"
+                 style=" background-image linear-gradient(to right, #5192e1 0%, #5192e1 50%, #23ced5 100%); width 100%; height 60px; padding 13px; text-align center;">
+                <h3 style="color: white; float: left;">Về Chúng Tôi</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6" style="margin-top: 100px;">
+                <img src="~/images/atth2.1.png" style="width: 100%; overflow: hiden;" />
+            </div>
+            <div class="col-md-6 col-lg-6" style="margin-top: 100px; padding: 0 60PX;">
+                <h1>ATECHWORLD là công ty với vốn đầu tư 100% từ Châu Âu</h1>
+                <p style="color: #808080;">
+                    Đến với AtechWorld với nhiều năm kinh nghiệp trong ngành Phần Mềm & Hệ thống Điện Tử,
+                    chúng tôi không chỉ giúp bạn có được sản phẩm phù hợp nhất với doanh nghiệp của mình. Mà còn sẽ cung cấp thêm
+                    những giải pháp tối ưu giúp doanh nghiệp bạn tăng doanh số hơn cũng như đồng hành cùng bạn phát triển sản phẩm
+                    ngày một hoàn thiện hơn.
+                </p>
+                <div style="text-align: center;">
+                    <button class="btn-hover color-9">
+                        <a href="tel:0123456789"
+                           style="text-decoration: none; color: white; background: none;">
+                            Liên
+                            hệ ngay với chúng tôi
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 100px;">
+            <div class="col-md-6 col-lg-6" style="margin-top: 100px; padding: 0 60PX;">
+                <h1>Dịch vụ mà chúng tôi cung cấp</h1>
+                <p style="color: #808080;">
+                    Không có thách thức nào là quá lớn Không có chi tiết nào là quá nhỏ. Từ cái nhìn về
+                    bức tranh tổng thể cho đến sự nghiêm túc chỉnh chu ở từng chi tiết tại mỗi bước của dịch vụ mà chúng tôi mang
+                    lại chính là cách chúng tôi hỗ trợ bạn đạt được mục tiêu của mình.
+                </p>
+            </div>
+            <div class="col-md-6 col-lg-6 ds2" style="margin-top: 100px;">
+                <!-- Progress Bars -->
+                <a class="pbright" onclick="one()"><span class="clpc">Lập trình ứng dụng di động đa nền tảng</span></a>
+                <div id="myProgress">
+                    <div id="myBar"></div>
+                </div>
+                <a class="pbright" onclick="two()"><span class="clpc">Thiết kế Website chuyên nghiệp</span></a>
+                <div id="myProgress">
+                    <div id="myBarr"></div>
+                </div>
+                <a class="pbright" onclick="three()"><span class="clpc">Dịch vụ IT Services</span></a>
+                <div id="myProgress">
+                    <div id="myBarrr"></div>
+                </div>
+                <a class="pbright" onclick="four()"><span class="clpc">Cung cấp trang thiết bị điện tử</span></a>
+                <div id="myProgress">
+                    <div id="myBarrrr"></div>
+                </div>
+                <a class="pbright" onclick="five()"><span class="clpc">Nhập khẩu hàng hóa nước ngoài</span></a>
+                <div id="myProgress">
+                    <div id="myBarrrrr"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid born" style="background-image: url('https://atechworld.vn/images/bg-business-born.jpg');">
+        <!-- ra đời từ -->
+        <div class="container center">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 year">
+                    <span>2018</span>
+                    <h3>Ra đời từ</h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 year" style="padding: 40px 0;">
+                    <p>
+                        Thiết kế Sản Phẩm là một niềm đam mê, nhìn thấy khách hàng hài lòng với sản phẩm là hạnh phúc của chúng tôi
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 year">
+                    <span>81</span>
+                    <h3>Dự án hoàn thành</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12" style="text-align: center;">
+                <div>
+                    <h2 style="color: #384141; font-size: xxx-large; font-weight: normal; line-height: 1; margin: 50px 0 0 0;">
+                        Các
+                        dịch vụ mà chúng
+                        tôi cung cấp</h1>
+                </div>
+                <div style="padding: 0 15%;">
+                    <h3 style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif; color: #808080; margin-bottom: 40px;">
+                        Sứ
+                        mệnh của chúng tôi là
+                        luôn mang đến các giải pháp tốt nhất dành cho doanh nghiệp</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 dvone" style="padding: 0;">
+                <img src="~/images/atth5.1.jpg" alt="Mobile App" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <a href="@Url.Action("mba", "atechworld")" class="next round"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        <p>Lập trình App Mobile</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 dvtwo" style="padding: 0;">
+                <img src="~/images/atth5.2.jpg" alt="TKWebsite" class="image" style="width: 100%">
+                <div class="overlay">
+                    <div class="text">
+                        <a href="@Url.Action("web", "atechworld")" class="next round"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        <p>Thiết kế Website</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 dvone" style="padding: 0;">
+                <img src="~/images/atth5.3.jpg" alt="IT services" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <a href="@Url.Action("services", "atechworld")" class="next round"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        <p>Dịch Vụ IT Services</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 dvtwo" style="padding: 0;">
+                <img src="~/images/atth1.4.jpg" alt="tbdientu" class="image" style="width: 100%">
+                <div class="overlay">
+                    <div class="text">
+                        <a href="@Url.Action("tbdientu", "atechworld")" class="next round"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        <p>Thiết Bị Điện Tử</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 100px;">
+            <div class="col-md-6 col-lg-6 dvone" style="padding: 0;">
+                <img src="~/images/import.png" alt="Mobile App" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <a href="@Url.Action("import", "atechworld")" class="next round"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        <p>Nhập Khẩu Hàng Nước Ngoài</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 dvtwo" style="padding: 0;">
+                
+            </div>
+        </div>
+    </div>
+    <!-- quy trình -->
+    <!-- / quy trình -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <div class="container-fluid" style=" background-color #f6f7f8;">
+        <div class="col-md-12 col-lg-12" style="padding: 0 44px;">
+            <h2>Đối Tác Của Chúng Tôi</h2>
+            <section class="customer-logos slider">
+                <div class="slide"><img src="~/images/atth5.4.png"></div>
+                <div class="slide"><img src="~/images/atth6.1.png"></div>
+                <div class="slide"><img src="~/images/atth6.2.png"></div>
+                <div class="slide"><img src="~/images/atth6.3.png"></div>
+                <div class="slide"><img src="~/images/atth6.5.png"></div>
+                <div class="slide"><img src="~/images/atth6.6.png"></div>
+                <div class="slide"><img src="~/images/atth6.7.png"></div>
+                <!-- <div class="slide"><img src="~/images/atth6.2.png"></div>
+                      <div class="slide"><img src="~/images/atth6.5.png"></div>
+                      <div class="slide"><img src="~/images/atth5.4.png"></div> -->
+            </section>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="background-color: #f6f7f8; padding: 80px 0;">
+        <div class="container" style="background-color: white;border-radius: 15px;">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <h2 style="text-align: center;">Liên Hệ Báo Giá</h2>
+                    <span></span>
+                </div>
+            </div>
+            <div class="row" style="padding: 38px;">
+                <div class="col-md-6 col-lg-6 bgicon">
+                    <!-- company information -->
+                    <h4 style="color: #24cdd5;">Công ty Giải Pháp Phần Mềm AtechWorld</h4>
+                    <h4>Văn Phòng Đại Diện Tại Việt Nam</h4>
+                    <p>
+                        Địa chỉ: Lầu 1 Toà Nhà Incomex Saigon - 106A Cư xá Nguyễn Văn Trỗi, P. 17, Q. Phú Nhuận, Tp. Hồ Chí Minh
+                    </p>
+                    <p>+84 9787 89140</p>
+                    <p>pm@atechworld.vn</p>
+                    <p>Thời gian làm việc: Thứ 2 - Thứ 7 : 9am - 7pm</p>
+                    <!-- nút liên kết mạng xã hội -->
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="#"><i class="far fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <!-- Form -->
+                    <form action="/action_page.php">
+                        <label for="fname"></label>
+                        <input type="text" id="fname" name="firstname" placeholder="Tên khách hàng">
+
+                        <label for="lname"></label>
+                        <input type="text" id="lname" name="lastname" placeholder="Địa chỉ email">
+
+                        <label for="subject"></label>
+                        <textarea id="subject" name="subject" placeholder="Nội dung: " style="height:200px"></textarea>
+
+                        <button style="text-align: center;" class="btn-hover color-9" type="submit">Gửi Nội Dung</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 50px;">
+            <div class="row" style="text-align: center;">
+                <div class="col-md-3 col-lg-3" style=" padding 15px;">
+                    <div class="nohovera" style="background-color: white; padding: 15px;">
+                        <i class="fas fa-mobile-alt" style="font-size: xx-large; color: #24cdd5; margin-bottom: 15px;"></i>
+                        <p><a href="tel: 0123456789" style="background: none; text-decoration: none;">+84 9787 89140</a></p>
+                        <p><a href="tel: 0123456789" style="background: none; text-decoration: none;">+84 9340 20930</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3" style=" padding 15px;">
+                    <div style="background-color: white; padding: 15px;">
+                        <i class="fas fa-map-marker-alt" style="font-size: xx-large; color: #24cdd5; margin-bottom: 15px;"></i>
+                        <p>Lầu 1 Toà Nhà Incomex Saigon - 106A Cư xá Nguyễn Văn Trỗi, P. 17, Q. Phú Nhuận, Tp. Hồ Chí Minh</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3" style=" padding 15px;">
+                    <div class="nohovera" style="background-color: white; padding: 15px;">
+                        <i class="far fa-envelope" style="font-size: xx-large; color: #24cdd5; margin-bottom: 15px;"></i>
+                        <p>
+                            <a href="mailto:pm@atechworld.vn" style="background: none; text-decoration: none;">pm@atechworld.vn</a>
+                        </p>
+                        <p>
+                            <a href="mailto:tuan.info@atechworld.vn"
+                               style="background: none; text-decoration: none;">tuan.info@atechworld.vn</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3" style=" padding 15px;">
+                    <div style="background-color: white; padding: 15px;">
+                        <i class="far fa-clock" style="font-size: xx-large; color: #24cdd5; margin-bottom: 15px;"></i>
+                        <p>Thứ 2 - Thứ 7</p>
+                        <p>9am - 7pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" style="margin-bottom: 40px;">
+            <div class="col-md-12 col-lg-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.248177787014!2d106.67964101462269!3d10.792294492310782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d37e09dfc3%3A0x36dae11b2a8ac5b3!2sIncomex%20Saigon%20Corp!5e0!3m2!1svi!2s!4v1638273708366!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;width: 100%;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: #26313c; padding-top: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="hovera color">
+                        <a href="#"><img src="~/images/logoatt.png" style="width: 40%" /></a>
+                        <p style="font-size: x-large;font-weight: bold;font-family: inherit;">
+                            Công ty TNHH Giải Pháp Phần Mềm
+                            AtechWorld
+                        </p>
+                        <p>Mã số thuế: 0316388011</p>
+                        <p>
+                            Văn phòng đại diện: Lầu 1 Toà Nhà Incomex Saigon - 106A Cư xá Nguyễn Văn Trỗi, P. 17, Q. Phú Nhuận, Tp.
+                            Hồ Chí Minh
+                        </p>
+                        <div>
+                            <span><i class="fas fa-mobile-alt" style="font-size: 35px; float: left; margin: 5px;"></i></span>
+                            <p style="margin-bottom: 0;">+84 9787 89140</p>
+                            <a href="mailto:pm@atechworld.vn">pm@atechworld.vn</a>
+                        </div>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="nohovera color">
+                        <h3>Dịch Vụ</h3>
+                        <ul>
+                            <li><a href="@Url.Action("mba", "atechworld")" class="hoverright"><span>Thiết kế App Mobile </span></a></li>
+                            <li><a href="@Url.Action("web", "atechworld")" class="hoverright"><span>Thiết kế Website</span></a></li>
+                            <li><a href="@Url.Action("services", "atechworld")" class="hoverright"><span>Dịch vụ IT Services</span></a></li>
+                            <li><a href="@Url.Action("tbdientu", "atechworld")" class="hoverright"><span>Thiết bị điện tử</span></a></li>
+                            <li><a href="@Url.Action("import", "atechworld")" class="hoverright"><span>Nhập Khẩu hàng nước ngoài</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="color">
+                        <h3>Giờ làm việc</h3>
+                        <p>Chúng tôi sẽ hỗ trợ bạn suốt 24/7 và cả ngày thứ 7.</p>
+                        <p>Trong Tuần: Thứ 2 - Thứ 7</p>
+                        <p>Trong Ngày: 9am - 7pm</p>
+                    </div>
+                </div>
+                <div class=" col-lg-3 col-md-6 col-sm-6">
+                    <!--Null-->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="lentop">
+        <a href="#"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+   
+</body>
+</html>

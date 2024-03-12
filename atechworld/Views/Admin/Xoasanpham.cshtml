@@ -1,0 +1,157 @@
+﻿@model atechworld.Models.DT
+
+@{
+    ViewBag.Title = "Xóa Sản Phẩm";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style type="text/css">
+    .no-color a
+    {
+        color: blue;
+    }
+    h2, h4
+    {
+        text-align: center;
+        margin-top: 28px;
+        color: black;
+    }
+    .tv a
+    {
+        color: blue;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: system-ui;
+        background: none;
+        text-decoration: none;
+    }
+    * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+    .btn-hover.color-2 {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+</style>
+
+<h2>XÓA SẢN PHẨM</h2>
+
+<h4>Bạn có Muốn Xóa Sản Phẩm Này Hay Không?</h4>
+<div>
+
+    <hr />
+    <div class="container">
+        <dl class="dl-horizontal">
+            <dt>
+                Tên Sảm Phẩm:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TenDT)
+            </dd>
+
+            <dt>
+                Giá Bán:
+            </dt>
+
+            <dd>
+                @String.Format("{0:0,0}", Model.GiaBan) VND
+            </dd>
+
+            <dt>
+                Mô Tả:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MoTa)
+            </dd>
+
+            <dt>
+                Hình Ảnh:
+            </dt>
+
+            <dd>
+                <img src="@Url.Content("~/product_img/" + Model.AnhBia)" style="width: 50%;" />
+            </dd>
+
+            <dt>
+                Ngày Cập Nhật:
+            </dt>
+
+            <dd>
+                @String.Format("{0:dd/MM/yyyy}", Model.NgayCapNhat)
+            </dd>
+
+            <dt>
+                Số Lượng Tồn:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SoLuongTon)
+            </dd>
+
+            <dt>
+                Chủ Đề:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ChuDe.TenChuDe)
+            </dd>
+
+            <dt>
+                Nhà Sản Xuất:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NhaSanXuat.TenNSX)
+            </dd>
+
+        </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-actions no-color tv">
+                <input type="submit" value="Xóa Sản Phẩm" class="btn-hover color-2" /><br />
+                <br />
+                @Html.ActionLink("Trở Về", "Sanpham")
+            </div>
+        }
+    </div>
+</div>

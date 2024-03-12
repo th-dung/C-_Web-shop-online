@@ -1,0 +1,44 @@
+﻿@using atechworld.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<DT>
+@{
+    ViewBag.Title = "Bán Thiết Bị Điện Tử";
+    Layout = "~/Views/Shared/_LayoutTB.cshtml";
+}
+<style>
+    .page a
+    {
+        color: black;
+    }
+</style>
+
+
+<h3 style="text-align:center; color: black; margin: 28px 0;">Sản Phẩm Mới của Chúng Tôi</h3>
+<div class="row">
+@foreach (var sp in Model)
+{
+    <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="box" style="text-align: center">
+            <div class="images">
+                <div class="dvone">
+                     <a href="@Url.Action("Details","atechworld", new { id = sp.MaDT })">
+                          <img style="width: 100%; overflow: hidden;" alt="@sp.TenDT" src="~/product_img/@sp.AnhBia" />
+                      </a>
+                </div>
+            </div>
+            <div style="padding: 5px;">
+                <div class="qcdv">
+                    <h3>@sp.TenDT</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+</div>
+
+Trang @(Model.PageCount <Model.PageNumber?0:Model.PageNumber)/@Model.PageCount;
+<div class="page">
+   @Html.PagedListPager(Model, page => Url.Action("tbdientu", new { page = page }))
+</div>
+
+

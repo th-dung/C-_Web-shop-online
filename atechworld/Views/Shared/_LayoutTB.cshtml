@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- mbacss -->
+    <link rel="stylesheet" type="text/css" href="~/Content/mba.css" />
+    <script src="~/Scripts/index.js"></script>
+</head>
+<body>
+    <section class="tbdientu">
+        <div class="opa">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="in">
+                            <h2>Cung cấp thiết bị điện tử</h2>
+                            <h3>Laptop, Macbook, Máy in,...</h3>
+                            <h2>Thi công lắp đặt hệ thống</h2>
+                            <h2>điện tử</h2>
+                            <h3>Lựa Chọn Đa Dạng Và Phong Phú Cho Bạn</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container bgx">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6" style=" font-weight: 800;">
+                @Html.Action("GiohangPartial", "Giohang")
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6" style="margin-top: 8px;">
+                <ul style="float: right; font-size: larger; font-weight: bold;">
+                    <li>
+                        @Html.ActionLink("Đăng Ký", "Dangky", "Nguoidung")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Đăng Nhập", "Dangnhap", "Nguoidung")
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 50px;">    
+            <!--chủ đề-->
+            @Html.Action("Chude", "atechworld")
+            <!--nhà sản xuất-->
+            @Html.Action("NhaSanXuat", "atechworld")
+        </div>
+        <div>
+            @RenderBody()
+        </div> 
+    </div>
+
+    <footer style="background-color: #26313c; padding-top: 50px; margin: 100px 0 0 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="hovera color">
+                        <a href="#"><img src="~/images/logoatt.png" style="width: 60%" /></a>
+                        <p style="font-size: x-large;font-weight: bold;font-family: inherit;">
+                            Công ty TNHH Giải Pháp
+                            Phần Mềm
+                            AtechWorld
+                        </p>
+                        <p>Mã số thuế: 0316388011</p>
+                        <p>
+                            Văn phòng đại diện: Lầu 1 Toà Nhà Incomex Saigon - 106A Cư xá Nguyễn Văn Trỗi, P. 17, Q. Phú
+                            Nhuận, Tp.
+                            Hồ Chí Minh
+                        </p>
+                        <div>
+                            <span>
+                                <i class="fas fa-mobile-alt"
+                                   style="font-size: 35px; float: left; margin: 5px;"></i>
+                            </span>
+                            <p style="margin-bottom: 0;">+84 9787 89140</p>
+                            <a href="mailto:pm@atechworld.vn">pm@atechworld.vn</a>
+                        </div>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="nohovera color" style="height: auto; padding-bottom: 50px;">
+                        <h3>Dịch Vụ</h3>
+                        <ul>
+                            <li><a href="@Url.Action("mba", "atechworld")" class="hoverright"><span>Thiết kế App Mobile </span></a></li>
+                            <li><a href="@Url.Action("web", "atechworld")" class="hoverright"><span>Thiết kế Website</span></a></li>
+                            <li><a href="@Url.Action("services", "atechworld")" class="hoverright"><span>Dịch vụ IT Services</span></a></li>
+                            <li><a href="#" class="hoverright"><span>Thiết bị điện tử</span></a></li>
+                            <li><a href="@Url.Action("import", "atechworld")" class="hoverright"><span>Nhập Khẩu hàng nước ngoài</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="color">
+                        <h3>Giờ làm việc</h3>
+                        <p>Chúng tôi sẽ hỗ trợ bạn suốt 24/7 và cả ngày thứ 7.</p>
+                        <p>Trong Tuần: Thứ 2 - Thứ 7</p>
+                        <p>Trong Ngày: 9am - 7pm</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <!-- Null -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="lentop">
+        <a href="#"><i class="fa fa-angle-up"></i></a>
+    </div>
+</body>
+</html>
